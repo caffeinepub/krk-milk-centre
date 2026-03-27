@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Green brand palette */
+    --background: 0.965 0.003 265;
+    --foreground: 0.17 0.005 265;
+    --card: 1 0 0;
+    --card-foreground: 0.17 0.005 265;
+    --popover: 1 0 0;
+    --popover-foreground: 0.17 0.005 265;
+    --primary: 0.43 0.125 145;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.96 0.03 145;
+    --secondary-foreground: 0.35 0.1 145;
+    --muted: 0.96 0.003 265;
+    --muted-foreground: 0.54 0.01 265;
+    --accent: 0.94 0.05 145;
+    --accent-foreground: 0.35 0.1 145;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    --border: 0.91 0.005 265;
+    --input: 0.91 0.005 265;
+    --ring: 0.43 0.125 145;
+    --chart-1: 0.43 0.125 145;
+    --chart-2: 0.55 0.1 145;
+    --chart-3: 0.7 0.08 145;
+    --chart-4: 0.85 0.05 145;
+    --chart-5: 0.646 0.222 41.116;
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.17 0.005 265;
+    --sidebar-primary: 0.43 0.125 145;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.96 0.03 145;
+    --sidebar-accent-foreground: 0.35 0.1 145;
+    --sidebar-border: 0.91 0.005 265;
+    --sidebar-ring: 0.43 0.125 145;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    page-break-after: always;
+  }
+  body {
+    background: white !important;
+  }
+  .print-container {
+    padding: 0 !important;
+  }
+}
